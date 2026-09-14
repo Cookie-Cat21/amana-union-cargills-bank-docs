@@ -2,6 +2,10 @@
 
 ## 2026-09-14
 
+- **Changed** `union_bank_offers`
+
+## 2026-09-14
+
 - **Added** `amana_exchange_rates` (GET `amanabank.lk/business/treasury/exchange-rates.html`)
 - **Changed** `amana_rates`
 - **Changed** `cargills_bank_rates`

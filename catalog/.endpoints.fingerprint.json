@@ -1,5 +1,5 @@
 {
-  "sha256": "40c37918a61ea0f33b95f27ac2b25df6c270d9074b0b73e6e072a980f3b7de53",
+  "sha256": "1afe519588a8d6b147c854ca77fe0101565a49c311f1ddf94e3524be2d66a521",
   "endpoint_count": 4,
   "endpoints": {
     "amana_exchange_rates": {
@@ -37,9 +37,9 @@
       "method": "GET",
       "path": "unionb.com/.../offers",
       "url": "https://www.unionb.com/personal/cards/offers",
-      "status": "live",
-      "access": "html_scrape",
-      "summary": "Union Bank card offers HTML. Was flaky in the 2026-09-14 probe run (transient \u2014 confirmed 200 on live re-check, no change needed).",
+      "status": "parked",
+      "access": "parked",
+      "summary": "PARK \u2014 corrected 2026-09-14. The earlier \"confirmed 200, no change needed\" note was wrong: it only checked the HTTP status, not the actual body. The real response is an Incapsula WAF block page (850 bytes, \"Request unsuccessful. Incapsula incident ID...\") wrapped in a 200 status \u2014 a false-healthy response identical in shape to the PABC/Amex-old-URL cases. Per docs/ETHICS.md, not bypassing the WAF; parked instead.",
       "pagination": null
     }
   }
