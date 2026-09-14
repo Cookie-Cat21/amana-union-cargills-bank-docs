@@ -9,19 +9,25 @@ source_docs_in_lankawa:
 endpoints:
 - id: amana_rates
   method: GET
-  url: https://www.amanabank.lk/rates/
-  path: amanabank.lk/rates/
-  summary: Amana rates pages (Islamic products).
+  url: https://www.amanabank.lk/profit-sharing-ratios/
+  path: amanabank.lk/profit-sharing-ratios/
+  summary: Amana profit-sharing ratios (Islamic-banking equivalent of deposit rates). Site restructured; old /rates/ page is gone, split into this page plus a separate exchange-rates page at /business/treasury/exchange-rates.html. Verified 2026-09-14.
+  access: html_scrape
+- id: amana_exchange_rates
+  method: GET
+  url: https://www.amanabank.lk/business/treasury/exchange-rates.html
+  path: amanabank.lk/business/treasury/exchange-rates.html
+  summary: Amana exchange rates (split out from the old combined /rates/ page). Verified 2026-09-14.
   access: html_scrape
 - id: union_bank_offers
   method: GET
   url: https://www.unionb.com/personal/cards/offers
   path: unionb.com/.../offers
-  summary: Union Bank card offers HTML.
+  summary: Union Bank card offers HTML. Was flaky in the 2026-09-14 probe run (transient — confirmed 200 on live re-check, no change needed).
   access: html_scrape
 - id: cargills_bank_rates
   method: GET
-  url: https://www.cargillsbank.com/rates-and-tariffs/
-  path: cargillsbank.com/rates-and-tariffs/
-  summary: Cargills Bank rates & tariffs.
+  url: https://www.cargillsbank.com/deposit-interest-rates
+  path: cargillsbank.com/deposit-interest-rates
+  summary: Cargills Bank rates & tariffs. Old /rates-and-tariffs/ path now 301-redirects here; using the canonical destination directly. Site also splits out /rates-and-charges/exchange-rates/, lending-rates/, credit-card-tariff/ as separate pages if more granular data is wanted later. Verified 2026-09-14.
   access: html_scrape
